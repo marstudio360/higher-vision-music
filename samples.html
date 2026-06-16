@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Higher Vision Samples — sample packs &amp; loops (coming soon)</title>
+  <meta name="description" content="Higher Vision sample packs, loops and one-shots for producers — royalty-free, premium, coming soon." />
+  <link rel="icon" type="image/png" href="HigherVision_Logo_White_NoBG.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=Space+Mono&display=swap" rel="stylesheet" />
+  <style>
+    .s-hero{padding:9rem 0 3rem;text-align:center;}
+    .s-hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.6rem,6vw,4.8rem);text-transform:uppercase;line-height:.95;}
+    .s-hero h1 .teal{color:var(--teal-bright,#3d9e8c);}
+    .s-hero p{color:var(--light,#8ca0a0);max-width:52ch;margin:1rem auto 2rem;line-height:1.7;}
+    .s-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin:2rem 0 4rem;}
+    .s-card{border:1px solid var(--border,#1e3c3c);border-radius:14px;padding:1.6rem;background:var(--surface,#001e23);}
+    .s-card .soon{font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.16em;text-transform:uppercase;color:var(--violet-hi,#9090d4);}
+    .s-card h4{font-size:1.15rem;margin:.4rem 0;}
+    .s-card p{color:var(--light,#8ca0a0);font-size:.85rem;line-height:1.6;}
+  </style>
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <a href="./" class="nav-logo"><img src="HigherVision_Logo_White_NoBG.png" alt="Higher Vision Music" /><span>Higher Vision Music</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="./">Home</a></li><li><a href="./#playlists">Playlists</a></li><li><a href="beats.html">Beats</a></li>
+      <li><a href="samples.html">Samples</a></li><li><a href="visualizer.html">Visualizer</a></li><li><a href="blog/">Blog</a></li>
+    </ul>
+  </nav>
+
+  <header class="s-hero container">
+    <p class="eyebrow">Higher Vision Samples</p>
+    <h1>Sounds to <span class="teal">build with.</span></h1>
+    <p>Premium sample packs, loops and one-shots — drums, textures, melodies and the exact tones behind Higher Vision beats. Royalty-free for your productions.</p>
+  </header>
+
+  <section class="container">
+    <div class="s-grid">
+      <div class="s-card"><span class="soon">Coming soon</span><h4>Slow Boombap Kit</h4><p>Dusty drums, warm keys and vinyl textures — the core of the Higher Vision sound.</p></div>
+      <div class="s-card"><span class="soon">Coming soon</span><h4>Ambient Textures</h4><p>Evolving pads, drones and field-recorded atmospheres for cinematic depth.</p></div>
+      <div class="s-card"><span class="soon">Coming soon</span><h4>Lofi Melody Loops</h4><p>Hookable, key-labelled melody loops ready to flip.</p></div>
+      <div class="s-card"><span class="soon">Coming soon</span><h4>One-Shot Vault</h4><p>Kicks, snares, hats and FX — clean, punchy, mix-ready one-shots.</p></div>
+    </div>
+  </section>
+
+  <section class="follow-cta">
+    <div class="container">
+      <div class="follow-cta-inner reveal">
+        <p class="eyebrow">Be first</p>
+        <h2>Get the packs at launch</h2>
+        <p>Sample packs drop soon. Leave your email for first access + a free starter pack.</p>
+        <form onsubmit="event.preventDefault();this.querySelector('button').textContent='✓ You\'re on the list';" style="display:flex;gap:.6rem;max-width:420px;margin:1.2rem auto 0;flex-wrap:wrap;">
+          <input type="email" required placeholder="you@email.com" style="flex:1;min-width:200px;background:#08171d;border:1px solid var(--border,#1e3c3c);border-radius:100px;padding:.9rem 1.2rem;color:#fff;" />
+          <button class="btn btn-primary" type="submit">Notify me</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="container"><div class="footer-bottom"><p>© 2026 Higher Vision Music. · <a href="./">Home</a> · <a href="beats.html">Beats</a> · <a href="visualizer.html">Visualizer</a> · <a href="blog/">Blog</a></p></div></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>

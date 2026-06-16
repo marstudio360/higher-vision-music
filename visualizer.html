@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Higher Vision Visualizer — turn any track into living visuals</title>
+  <meta name="description" content="The Higher Vision music visualizer: load a track, pick a living engine, and render audio-reactive videos for YouTube, Reels and Shorts." />
+  <link rel="icon" type="image/png" href="HigherVision_Logo_White_NoBG.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=Space+Mono&display=swap" rel="stylesheet" />
+  <style>
+    .viz-hero{padding:9rem 0 4rem;text-align:center;}
+    .viz-hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.6rem,6vw,4.8rem);text-transform:uppercase;line-height:.95;}
+    .viz-hero h1 .teal{color:var(--teal-bright,#3d9e8c);}
+    .viz-hero p{color:var(--light,#8ca0a0);max-width:54ch;margin:1rem auto 2rem;line-height:1.7;}
+    .viz-frame{max-width:920px;margin:0 auto;aspect-ratio:16/9;border-radius:16px;border:1px solid var(--border,#1e3c3c);overflow:hidden;background:radial-gradient(ellipse at 50% 40%,rgba(115,115,185,.25),transparent 70%),#05121a;display:flex;align-items:center;justify-content:center;}
+    .viz-frame img{width:90px;opacity:.5;mix-blend-mode:screen;}
+    .viz-feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:3rem 0;}
+    .viz-feat{border:1px solid var(--border,#1e3c3c);border-radius:14px;padding:1.4rem;background:var(--surface,#001e23);}
+    .viz-feat h4{font-size:1.05rem;margin-bottom:.4rem;}
+    .viz-feat p{color:var(--light,#8ca0a0);font-size:.86rem;line-height:1.6;}
+  </style>
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <a href="./" class="nav-logo"><img src="HigherVision_Logo_White_NoBG.png" alt="Higher Vision Music" /><span>Higher Vision Music</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="./">Home</a></li><li><a href="./#playlists">Playlists</a></li><li><a href="beats.html">Beats</a></li>
+      <li><a href="samples.html">Samples</a></li><li><a href="visualizer.html">Visualizer</a></li><li><a href="blog/">Blog</a></li>
+    </ul>
+  </nav>
+
+  <header class="viz-hero container">
+    <p class="eyebrow">Higher Vision Visualizer</p>
+    <h1>Make your sound <span class="teal">come alive.</span></h1>
+    <p>Drop in a track, pick a living engine, and the visuals breathe with every beat — rendered for YouTube, Reels and Shorts. The same engine we use to bring Higher Vision releases to life.</p>
+    <a href="#early" class="btn btn-primary">Get early access</a>
+    <div class="viz-frame" style="margin-top:3rem;"><img src="HigherVision_Logo_White_NoBG.png" alt="" /></div>
+  </header>
+
+  <section class="container">
+    <div class="viz-feats">
+      <div class="viz-feat"><h4>Audio-reactive engines</h4><p>GPU particle fluids, plasma crystals, neural constellations — every visual moves to the bass, mids and energy of your track.</p></div>
+      <div class="viz-feat"><h4>Any aspect</h4><p>Render 16:9 for YouTube, 9:16 for Reels &amp; Shorts, or 1:1 — one track, every format.</p></div>
+      <div class="viz-feat"><h4>Your backgrounds</h4><p>Layer your own image or video behind the reactive engine for a fully branded look.</p></div>
+      <div class="viz-feat"><h4>Export &amp; ship</h4><p>Bake straight to video with the audio baked in — ready to upload.</p></div>
+    </div>
+  </section>
+
+  <section class="follow-cta" id="early">
+    <div class="container">
+      <div class="follow-cta-inner reveal">
+        <p class="eyebrow">In development</p>
+        <h2>Early access to the Visualizer</h2>
+        <p>We're polishing it now. Leave your email and you'll be first in when it opens.</p>
+        <form onsubmit="event.preventDefault();this.querySelector('button').textContent='✓ You\'re on the list';" style="display:flex;gap:.6rem;max-width:420px;margin:1.2rem auto 0;flex-wrap:wrap;">
+          <input type="email" required placeholder="you@email.com" style="flex:1;min-width:200px;background:#08171d;border:1px solid var(--border,#1e3c3c);border-radius:100px;padding:.9rem 1.2rem;color:#fff;" />
+          <button class="btn btn-primary" type="submit">Notify me</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="container"><div class="footer-bottom"><p>© 2026 Higher Vision Music. · <a href="./">Home</a> · <a href="beats.html">Beats</a> · <a href="samples.html">Samples</a> · <a href="blog/">Blog</a></p></div></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Higher Vision Beats — License premium beats</title>
+  <meta name="description" content="Premium slow-boombap, lofi and cinematic beats. License from $20, or full buyout with master + publishing transfer. Higher Vision originals." />
+  <link rel="icon" type="image/png" href="HigherVision_Logo_White_NoBG.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Space+Mono&display=swap" rel="stylesheet" />
+  <style>
+    .store-hero { padding: 9rem 0 3rem; text-align: center; }
+    .store-hero h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.6rem,6vw,4.5rem); letter-spacing:.02em; text-transform:uppercase; line-height:.95; }
+    .store-hero h1 .teal { color: var(--teal-bright, #3d9e8c); }
+    .store-hero p { color: var(--light, #8ca0a0); max-width: 52ch; margin: 1rem auto 0; font-size: 1.02rem; line-height:1.7; }
+    .license-legend { display:flex; flex-wrap:wrap; gap:.6rem; justify-content:center; margin-top:1.6rem; }
+    .license-legend span { font-family:'Space Mono',monospace; font-size:.62rem; letter-spacing:.1em; text-transform:uppercase; color:var(--muted,#4b6969); border:1px solid var(--border,#1e3c3c); border-radius:100px; padding:.45rem .8rem; }
+    .license-legend b { color:var(--teal-bright,#3d9e8c); }
+    .beats-wrap { padding: 1rem 0 6rem; }
+    .beat-row { display:grid; grid-template-columns: 44px 1fr auto; gap:1rem; align-items:center; padding:1rem 1.2rem; border:1px solid var(--border,#1e3c3c); border-radius:14px; background:var(--surface,#001e23); margin-bottom:.7rem; transition:border-color .25s; }
+    .beat-row:hover { border-color: var(--teal-bright,#3d9e8c); }
+    .beat-play { width:44px; height:44px; border-radius:50%; border:none; background:var(--teal-bright,#3d9e8c); color:#04110d; font-size:1rem; cursor:pointer; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .beat-play.playing { background:var(--violet,#7373b9); }
+    .beat-info h4 { font-size:1.05rem; margin:0; }
+    .beat-info .beat-tags { font-family:'Space Mono',monospace; font-size:.58rem; letter-spacing:.1em; text-transform:uppercase; color:var(--muted,#4b6969); margin-top:.2rem; }
+    .beat-buy { display:flex; gap:.4rem; flex-wrap:wrap; justify-content:flex-end; }
+    .lic-btn { font-family:'Space Mono',monospace; font-size:.66rem; letter-spacing:.04em; padding:.5rem .7rem; border-radius:8px; border:1px solid var(--border-2,#2d4b4b); background:transparent; color:var(--light,#8ca0a0); cursor:pointer; transition:all .2s; white-space:nowrap; }
+    .lic-btn:hover { border-color:var(--teal-bright,#3d9e8c); color:#fff; }
+    .lic-btn.vision { border-color:var(--teal-bright,#3d9e8c); color:var(--teal-bright,#3d9e8c); font-weight:700; }
+    .lic-btn b { color:#fff; }
+    @media(max-width:680px){ .beat-row{ grid-template-columns:40px 1fr; } .beat-buy{ grid-column:1/-1; justify-content:flex-start; margin-top:.3rem; } }
+    /* modal */
+    .lic-modal { position:fixed; inset:0; background:rgba(3,8,10,.8); backdrop-filter:blur(6px); display:none; align-items:center; justify-content:center; z-index:200; padding:1.2rem; }
+    .lic-modal.open { display:flex; }
+    .lic-card { background:var(--surface-2,#0f2a30); border:1px solid var(--border-2,#2d4b4b); border-radius:16px; max-width:440px; width:100%; padding:1.8rem; }
+    .lic-card h3 { font-family:'Bebas Neue',sans-serif; font-size:1.8rem; letter-spacing:.03em; text-transform:uppercase; }
+    .lic-card .lic-price { color:var(--teal-bright,#3d9e8c); font-family:'Bebas Neue'; font-size:2.2rem; }
+    .lic-card p { color:var(--light,#8ca0a0); font-size:.9rem; line-height:1.6; margin:.6rem 0 1.2rem; }
+    .lic-card .x { float:right; background:none; border:none; color:var(--muted,#4b6969); font-size:1.4rem; cursor:pointer; }
+  </style>
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <a href="./" class="nav-logo"><img src="HigherVision_Logo_White_NoBG.png" alt="Higher Vision Music" /><span>Higher Vision Music</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="./">Home</a></li>
+      <li><a href="./#playlists">Playlists</a></li>
+      <li><a href="beats.html">Beats</a></li>
+      <li><a href="samples.html">Samples</a></li>
+      <li><a href="visualizer.html">Visualizer</a></li>
+      <li><a href="blog/">Blog</a></li>
+    </ul>
+  </nav>
+
+  <header class="store-hero container">
+    <p class="eyebrow">Higher Vision Originals</p>
+    <h1>Beats with <span class="teal">no limits.</span></h1>
+    <p>Slow boombap, lofi and cinematic instrumentals — produced for ads, videos, films, and artists. License what you need, or take the whole thing.</p>
+    <div class="license-legend">
+      <span><b>Signal</b> · MP3 · $20</span>
+      <span><b>Current</b> · WAV · $40</span>
+      <span><b>Spectrum</b> · Stems · $60</span>
+      <span><b>Vision</b> · Full Buyout · $97</span>
+    </div>
+  </header>
+
+  <section class="beats-wrap">
+    <div class="container">
+      <div id="beatList"><p style="color:var(--muted,#4b6969);text-align:center;padding:2rem;">Loading beats…</p></div>
+    </div>
+  </section>
+
+  <div class="lic-modal" id="licModal">
+    <div class="lic-card">
+      <button class="x" id="licClose">×</button>
+      <p class="eyebrow" id="licBeat">Beat</p>
+      <h3 id="licName">License</h3>
+      <div class="lic-price" id="licPrice">$0</div>
+      <p id="licBlurb"></p>
+      <a href="#" id="licBuy" class="btn btn-primary" style="width:100%;text-align:center;" target="_blank" rel="noopener">Continue to checkout →</a>
+      <p style="font-size:.68rem;color:var(--muted,#4b6969);margin-top:.8rem;text-align:center;">Instant delivery after payment. Questions? hello@highervisionmusic.com</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom"><p>© 2026 Higher Vision Music. All rights reserved. · <a href="./">Home</a> · <a href="beats.html">Beats</a> · <a href="samples.html">Samples</a> · <a href="visualizer.html">Visualizer</a></p></div>
+    </div>
+  </footer>
+
+  <audio id="player"></audio>
+  <script>
+    let catalog = null, playing = null;
+    const player = document.getElementById('player');
+    const list = document.getElementById('beatList');
+
+    fetch('catalog.json').then(r => r.json()).then(c => { catalog = c; render(); })
+      .catch(() => { list.innerHTML = '<p style="color:#c66;text-align:center;padding:2rem;">Catalog failed to load.</p>'; });
+
+    function render() {
+      const lic = catalog.licenses;
+      list.innerHTML = catalog.beats.map((b, i) => `
+        <div class="beat-row">
+          <button class="beat-play" data-i="${i}" aria-label="Play preview">▶</button>
+          <div class="beat-info">
+            <h4>${b.title}</h4>
+            <div class="beat-tags">Slow Boombap · Higher Vision Original · 30s preview</div>
+          </div>
+          <div class="beat-buy">
+            ${lic.map(l => `<button class="lic-btn ${l.id==='vision'?'vision':''}" data-beat="${i}" data-lic="${l.id}">${l.name} <b>$${l.price}</b></button>`).join('')}
+          </div>
+        </div>`).join('');
+    }
+
+    list.addEventListener('click', (e) => {
+      const play = e.target.closest('.beat-play');
+      const lic = e.target.closest('.lic-btn');
+      if (play) {
+        const b = catalog.beats[+play.dataset.i];
+        if (playing === play) { player.pause(); play.textContent = '▶'; play.classList.remove('playing'); playing = null; return; }
+        document.querySelectorAll('.beat-play').forEach(p => { p.textContent = '▶'; p.classList.remove('playing'); });
+        player.src = b.preview; player.play(); play.textContent = '❚❚'; play.classList.add('playing'); playing = play;
+      }
+      if (lic) {
+        const b = catalog.beats[+lic.dataset.beat];
+        const l = catalog.licenses.find(x => x.id === lic.dataset.lic);
+        openLicense(b, l);
+      }
+    });
+    player.addEventListener('ended', () => { document.querySelectorAll('.beat-play').forEach(p => { p.textContent='▶'; p.classList.remove('playing'); }); playing=null; });
+
+    const modal = document.getElementById('licModal');
+    function openLicense(b, l) {
+      document.getElementById('licBeat').textContent = b.title;
+      document.getElementById('licName').textContent = l.name + ' License';
+      document.getElementById('licPrice').textContent = '$' + l.price;
+      document.getElementById('licBlurb').textContent = l.blurb;
+      const buy = document.getElementById('licBuy');
+      const base = l.buyUrl || '';
+      buy.href = base ? (base + (base.includes('?') ? '&' : '?') + 'client_reference_id=' + encodeURIComponent(b.slug + '__' + l.id)) : 'mailto:hello@highervisionmusic.com?subject=' + encodeURIComponent('Beat license: ' + b.title + ' (' + l.name + ')');
+      buy.textContent = base ? 'Continue to checkout →' : 'Request this license →';
+      modal.classList.add('open');
+    }
+    document.getElementById('licClose').onclick = () => modal.classList.remove('open');
+    modal.onclick = (e) => { if (e.target === modal) modal.classList.remove('open'); };
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

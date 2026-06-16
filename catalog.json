@@ -1,0 +1,267 @@
+﻿{
+    "updated":  "2026-06-16",
+    "licenses":  [
+                     {
+                         "id":  "signal",
+                         "name":  "Signal",
+                         "price":  20,
+                         "format":  "MP3",
+                         "blurb":  "Non-exclusive MP3 lease. Streaming, content, demos, social."
+                     },
+                     {
+                         "id":  "current",
+                         "name":  "Current",
+                         "price":  40,
+                         "format":  "WAV",
+                         "blurb":  "Non-exclusive WAV lease. Broadcast-quality, wider commercial use."
+                     },
+                     {
+                         "id":  "spectrum",
+                         "name":  "Spectrum",
+                         "price":  60,
+                         "format":  "Trackout",
+                         "blurb":  "Full track-out / stems. Mix and arrange it your own way."
+                     },
+                     {
+                         "id":  "vision",
+                         "name":  "Vision",
+                         "price":  97,
+                         "format":  "Exclusive",
+                         "blurb":  "Full buyout. Exclusive rights, full master + publishing transfer, removed from store."
+                     }
+                 ],
+    "beats":  [
+                  {
+                      "title":  "Cement Lullaby",
+                      "slug":  "cement-lullaby",
+                      "preview":  "beats-preview/cement-lullaby.mp3",
+                      "r2_key":  "higher-vision/beats/cement-lullaby.mp3",
+                      "bpm":  null,
+                      "key":  null
+                  },
+                  {
+                      "title":  "Chrome Pulse",
+                      "slug":  "chrome-pulse",
+                      "preview":  "beats-preview/chrome-pulse.mp3",
+                      "r2_key":  "higher-vision/beats/chrome-pulse.mp3",
+                      "bpm":  null,
+                      "key":  null
+                  },
+                  {
+                      "title":  "Chrome Synapse",
+                      "slug":  "chrome-synapse",
+                      "preview":  "beats-preview/chrome-synapse.mp3",
+                      "r2_key":  "higher-vision/beats/chrome-synapse.mp3",
+                      "bpm":  null,
+                      "key":  null
+                  },
+                  {
+                      "title":  "Citrus Cement",
+                      "slug":  "citrus-cement",
+                      "preview":  "beats-preview/citrus-cement.mp3",
+                      "r2_key":  "higher-vision/beats/citrus-cement.mp3",
+                      "bpm":  null,
+                      "key":  null
+                  },
+                  {
+                      "title":  "Concrete Citrus",
+                      "slug":  "concrete-citrus",
+                      "preview":  "beats-preview/concrete-citrus.mp3",
+                      "r2_key":  "higher-vision/beats/concrete-citrus.mp3",
+                      "bpm":  null,
+                      "key":  null
+                  },
+                  {
+                      "title":  "Concrete Serenity",
+                      "slug":  "concrete-serenity",
+                      "preview":  "beats-preview/concrete-serenity.mp3",
+                      "r2_key":  "higher-vision/beats/concrete-serenity.mp3",
+                      "bpm":  null,
+                      "key":  null
+                  },
+                  {
+                      "title":  "Concrete Skyline",
+                      "slug":  "concrete-skyline",
+                      "preview":  "beats-preview/concrete-skyline.mp3",
+                      "r2_key":  "higher-vision/beats/concrete-skyline.mp3",
+                      "bpm":  null,
+                      "key":  null
+                  },
+                  {
+                      "title":  "Concrete Surfline",
+                      "slug":  "concrete-surfline",
+                      "preview":  "beats-preview/concrete-surfline.mp3",
+                      "r2_key":  "higher-vision/beats/concrete-surfline.mp3",
+                      "bpm":  null,
+                      "key":  null
+                  },
+                  {
+                      "title":  "Glass Tides",
+                      "slug":  "glass-tides",
+                      "preview":  "beats-preview/glass-tides.mp3",
+                      "r2_key":  "higher-vision/beats/glass-tides.mp3",
+                      "bpm":  null,
+                      "key":  null
+                  },
+                  {
+                      "title":  "Lean and Smooth",
+                      "slug":  "lean-and-smooth",
+                      "preview":  "beats-preview/lean-and-smooth.mp3",
+                      "r2_key":  "higher-vision/beats/lean-and-smooth.mp3",
+                      "bpm":  null,
+                      "key":  null
+                  },
+                  {
+                      "title":  "Lean Groove",
+                      "slug":  "lean-groove",
+                      "preview":  "beats-preview/lean-groove.mp3",
+                      "r2_key":  "higher-vision/beats/lean-groove.mp3",
+                      "bpm":  null,
+                      "key":  null
+                  },
+                  {
+                      "title":  "Lean Motion",
+                      "slug":  "lean-motion",
+                      "preview":  "beats-preview/lean-motion.mp3",
+                      "r2_key":  "higher-vision/beats/lean-motion.mp3",
+                      "bpm":  null,
+                      "key":  null
+                  },
+                  {
+                      "title":  "Neonless Citrus",
+                      "slug":  "neonless-citrus",
+                      "preview":  "beats-preview/neonless-citrus.mp3",
+                      "r2_key":  "higher-vision/beats/neonless-citrus.mp3",
+                      "bpm":  null,
+                      "key":  null
+                  },
+                  {
+                      "title":  "Skate Salt",
+                      "slug":  "skate-salt",
+                      "preview":  "beats-preview/skate-salt.mp3",
+                      "r2_key":  "higher-vision/beats/skate-salt.mp3",
+                      "bpm":  null,
+                      "key":  null
+                  },
+                  {
+                      "title":  "Smooth \u0026 Good Vibes",
+                      "slug":  "smooth-and-good-vibes",
+                      "preview":  "beats-preview/smooth-and-good-vibes.mp3",
+                      "r2_key":  "higher-vision/beats/smooth-and-good-vibes.mp3",
+                      "bpm":  null,
+                      "key":  null
+                  },
+                  {
+                      "title":  "Smooth Break",
+                      "slug":  "smooth-break",
+                      "preview":  "beats-preview/smooth-break.mp3",
+                      "r2_key":  "higher-vision/beats/smooth-break.mp3",
+                      "bpm":  null,
+                      "key":  null
+                  },
+                  {
+                      "title":  "Soul of the Game",
+                      "slug":  "soul-of-the-game",
+                      "preview":  "beats-preview/soul-of-the-game.mp3",
+                      "r2_key":  "higher-vision/beats/soul-of-the-game.mp3",
+                      "bpm":  null,
+                      "key":  null
+                  },
+                  {
+                      "title":  "Soul of the Machine",
+                      "slug":  "soul-of-the-machine",
+                      "preview":  "beats-preview/soul-of-the-machine.mp3",
+                      "r2_key":  "higher-vision/beats/soul-of-the-machine.mp3",
+                      "bpm":  null,
+                      "key":  null
+                  },
+                  {
+                      "title":  "Soul Surf",
+                      "slug":  "soul-surf",
+                      "preview":  "beats-preview/soul-surf.mp3",
+                      "r2_key":  "higher-vision/beats/soul-surf.mp3",
+                      "bpm":  null,
+                      "key":  null
+                  },
+                  {
+                      "title":  "Soulful Break",
+                      "slug":  "soulful-break",
+                      "preview":  "beats-preview/soulful-break.mp3",
+                      "r2_key":  "higher-vision/beats/soulful-break.mp3",
+                      "bpm":  null,
+                      "key":  null
+                  },
+                  {
+                      "title":  "Still Water Drift",
+                      "slug":  "still-water-drift",
+                      "preview":  "beats-preview/still-water-drift.mp3",
+                      "r2_key":  "higher-vision/beats/still-water-drift.mp3",
+                      "bpm":  null,
+                      "key":  null
+                  },
+                  {
+                      "title":  "The Flow",
+                      "slug":  "the-flow",
+                      "preview":  "beats-preview/the-flow.mp3",
+                      "r2_key":  "higher-vision/beats/the-flow.mp3",
+                      "bpm":  null,
+                      "key":  null
+                  },
+                  {
+                      "title":  "Tidal Glass",
+                      "slug":  "tidal-glass",
+                      "preview":  "beats-preview/tidal-glass.mp3",
+                      "r2_key":  "higher-vision/beats/tidal-glass.mp3",
+                      "bpm":  null,
+                      "key":  null
+                  },
+                  {
+                      "title":  "Velvet Brake",
+                      "slug":  "velvet-brake",
+                      "preview":  "beats-preview/velvet-brake.mp3",
+                      "r2_key":  "higher-vision/beats/velvet-brake.mp3",
+                      "bpm":  null,
+                      "key":  null
+                  },
+                  {
+                      "title":  "Velvet Chrome",
+                      "slug":  "velvet-chrome",
+                      "preview":  "beats-preview/velvet-chrome.mp3",
+                      "r2_key":  "higher-vision/beats/velvet-chrome.mp3",
+                      "bpm":  null,
+                      "key":  null
+                  },
+                  {
+                      "title":  "Velvet Clutch",
+                      "slug":  "velvet-clutch",
+                      "preview":  "beats-preview/velvet-clutch.mp3",
+                      "r2_key":  "higher-vision/beats/velvet-clutch.mp3",
+                      "bpm":  null,
+                      "key":  null
+                  },
+                  {
+                      "title":  "Velvet Footstep",
+                      "slug":  "velvet-footstep",
+                      "preview":  "beats-preview/velvet-footstep.mp3",
+                      "r2_key":  "higher-vision/beats/velvet-footstep.mp3",
+                      "bpm":  null,
+                      "key":  null
+                  },
+                  {
+                      "title":  "Velvet Pistons",
+                      "slug":  "velvet-pistons",
+                      "preview":  "beats-preview/velvet-pistons.mp3",
+                      "r2_key":  "higher-vision/beats/velvet-pistons.mp3",
+                      "bpm":  null,
+                      "key":  null
+                  },
+                  {
+                      "title":  "Waxwheel Groove",
+                      "slug":  "waxwheel-groove",
+                      "preview":  "beats-preview/waxwheel-groove.mp3",
+                      "r2_key":  "higher-vision/beats/waxwheel-groove.mp3",
+                      "bpm":  null,
+                      "key":  null
+                  }
+              ]
+}

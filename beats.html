@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Higher Vision Beats — License premium beats</title>
-  <meta name="description" content="Premium slow-boombap, lofi and cinematic beats. License from $20, or full buyout with master + publishing transfer. Higher Vision originals." />
+  <title>Higher Vision Beats — Commercial beats for music, video, ads &amp; games</title>
+  <meta name="description" content="Premium slow-boombap, lofi &amp; cinematic beats. One simple $20 commercial license — use them in music, video, film, ads, games &amp; apps and sell your version. Or take an exclusive $97 full buyout. Free beats too." />
   <link rel="icon" type="image/png" href="HigherVision_Logo_White_NoBG.png" />
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,8 +28,10 @@
     .beat-buy { display:flex; gap:.4rem; flex-wrap:wrap; justify-content:flex-end; }
     .lic-btn { font-family:'Space Mono',monospace; font-size:.66rem; letter-spacing:.04em; padding:.5rem .7rem; border-radius:8px; border:1px solid var(--border-2,#2d4b4b); background:transparent; color:var(--light,#8ca0a0); cursor:pointer; transition:all .2s; white-space:nowrap; }
     .lic-btn:hover { border-color:var(--teal-bright,#3d9e8c); color:#fff; }
-    .lic-btn.vision { border-color:var(--teal-bright,#3d9e8c); color:var(--teal-bright,#3d9e8c); font-weight:700; }
+    .lic-btn.buyout { border-color:var(--teal-bright,#3d9e8c); color:var(--teal-bright,#3d9e8c); font-weight:700; }
+    .lic-btn.free { border-color:var(--violet,#7373b9); color:var(--violet,#7373b9); font-weight:700; }
     .lic-btn b { color:#fff; }
+    .lic-card .lic-formats { font-family:'Space Mono',monospace; font-size:.62rem; letter-spacing:.08em; text-transform:uppercase; color:var(--teal-bright,#3d9e8c); margin:-.4rem 0 .8rem; }
     @media(max-width:680px){ .beat-row{ grid-template-columns:40px 1fr; } .beat-buy{ grid-column:1/-1; justify-content:flex-start; margin-top:.3rem; } }
     /* modal */
     .lic-modal { position:fixed; inset:0; background:rgba(3,8,10,.8); backdrop-filter:blur(6px); display:none; align-items:center; justify-content:center; z-index:200; padding:1.2rem; }
@@ -57,13 +59,12 @@
 
   <header class="store-hero container">
     <p class="eyebrow">Higher Vision Originals</p>
-    <h1>Beats with <span class="teal">no limits.</span></h1>
-    <p>Slow boombap, lofi and cinematic instrumentals — produced for ads, videos, films, and artists. License what you need, or take the whole thing.</p>
+    <h1>Beats you can <span class="teal">actually use.</span></h1>
+    <p>Slow boombap, lofi and cinematic instrumentals — for artists, video makers, filmmakers, ad &amp; agency work, game and app devs. One simple commercial license lets you make it your own and sell your version. Want it all to yourself? Take the full buyout.</p>
     <div class="license-legend">
-      <span><b>Signal</b> · MP3 · $20</span>
-      <span><b>Current</b> · WAV · $40</span>
-      <span><b>Spectrum</b> · Stems · $60</span>
-      <span><b>Vision</b> · Full Buyout · $97</span>
+      <span><b>Free</b> · try it</span>
+      <span><b>Commercial</b> · WAV + MP3 320 · $20</span>
+      <span><b>Full Buyout</b> · exclusive · $97</span>
     </div>
   </header>
 
@@ -79,6 +80,7 @@
       <p class="eyebrow" id="licBeat">Beat</p>
       <h3 id="licName">License</h3>
       <div class="lic-price" id="licPrice">$0</div>
+      <p class="lic-formats" id="licFormats"></p>
       <p id="licBlurb"></p>
       <a href="#" id="licBuy" class="btn btn-primary" style="width:100%;text-align:center;" target="_blank" rel="noopener">Continue to checkout →</a>
       <p style="font-size:.68rem;color:var(--muted,#4b6969);margin-top:.8rem;text-align:center;">Instant delivery after payment. Questions? hello@highervisionmusic.com</p>
@@ -101,18 +103,20 @@
       .catch(() => { list.innerHTML = '<p style="color:#c66;text-align:center;padding:2rem;">Catalog failed to load.</p>'; });
 
     function render() {
-      const lic = catalog.licenses;
-      list.innerHTML = catalog.beats.map((b, i) => `
+      list.innerHTML = catalog.beats.map((b, i) => {
+        const tiers = catalog.licenses.filter(l => l.id !== 'free' || b.free);
+        return `
         <div class="beat-row">
           <button class="beat-play" data-i="${i}" aria-label="Play preview">▶</button>
           <div class="beat-info">
-            <h4>${b.title}</h4>
-            <div class="beat-tags">Slow Boombap · Higher Vision Original · 30s preview</div>
+            <h4>${b.title}${b.free ? ' <span style="color:var(--violet,#7373b9);font-family:Space Mono,monospace;font-size:.55rem;letter-spacing:.1em;">FREE</span>' : ''}</h4>
+            <div class="beat-tags">Slow Boombap · Higher Vision Original · WAV + MP3 320</div>
           </div>
           <div class="beat-buy">
-            ${lic.map(l => `<button class="lic-btn ${l.id==='vision'?'vision':''}" data-beat="${i}" data-lic="${l.id}">${l.name} <b>$${l.price}</b></button>`).join('')}
+            ${tiers.map(l => `<button class="lic-btn ${l.id}" data-beat="${i}" data-lic="${l.id}">${l.id==='free' ? 'Free download' : l.name + ' <b>$' + l.price + '</b>'}</button>`).join('')}
           </div>
-        </div>`).join('');
+        </div>`;
+      }).join('');
     }
 
     list.addEventListener('click', (e) => {
@@ -135,13 +139,21 @@
     const modal = document.getElementById('licModal');
     function openLicense(b, l) {
       document.getElementById('licBeat').textContent = b.title;
-      document.getElementById('licName').textContent = l.name + ' License';
-      document.getElementById('licPrice').textContent = '$' + l.price;
+      document.getElementById('licName').textContent = l.id === 'free' ? 'Free Download' : l.name;
+      document.getElementById('licPrice').textContent = l.price ? '$' + l.price : 'Free';
+      document.getElementById('licFormats').textContent = l.id === 'free' ? 'MP3 320 · credit “prod. Higher Vision” · non-monetized use' : 'Includes WAV + MP3 320 · instant delivery';
       document.getElementById('licBlurb').textContent = l.blurb;
       const buy = document.getElementById('licBuy');
-      const base = l.buyUrl || '';
-      buy.href = base ? (base + (base.includes('?') ? '&' : '?') + 'client_reference_id=' + encodeURIComponent(b.slug + '__' + l.id)) : 'mailto:hello@highervisionmusic.com?subject=' + encodeURIComponent('Beat license: ' + b.title + ' (' + l.name + ')');
-      buy.textContent = base ? 'Continue to checkout →' : 'Request this license →';
+      if (l.id === 'free') {
+        buy.href = b.free_url || ('free/' + b.slug + '.mp3');
+        buy.setAttribute('download', '');
+        buy.textContent = 'Download free →';
+      } else {
+        buy.removeAttribute('download');
+        const base = l.buyUrl || '';
+        buy.href = base ? (base + (base.includes('?') ? '&' : '?') + 'client_reference_id=' + encodeURIComponent(b.slug + '__' + l.id)) : 'mailto:hello@highervisionmusic.com?subject=' + encodeURIComponent('Beat license: ' + b.title + ' (' + l.name + ')');
+        buy.textContent = base ? 'Continue to checkout →' : 'Get this license →';
+      }
       modal.classList.add('open');
     }
     document.getElementById('licClose').onclick = () => modal.classList.remove('open');

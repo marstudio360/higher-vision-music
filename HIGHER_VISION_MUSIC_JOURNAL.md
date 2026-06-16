@@ -118,3 +118,28 @@ Higher Vision = **playlist network + AI-beat label + visualizer/YouTube channel 
 - **2026-06-14** — Fixed 3 link/year bugs (commit `bec2d25`), pushed → Pages rebuilt → verified live (follow/ambient HTTP 200, logo asset 200, no auralalchemy refs, © 2026). Only Meta Pixel remains (needs real ID). Pushed via token in URL only (origin remote stays clean).
 - **2026-06-14** — Mariano set the big vision (playlist network → paid submission service → social automation IG+YT → sell own samples/beats → self-promotion flywheel → ads). Ran research: Spotify API CAN fully manage owned playlists (add/remove/reorder/cover via `/items`, refresh-token headless, dev account must be Premium, no API for editorial/other-owner submission); stack = stay on GH Pages until first paid+gated feature then Vercel/Next+Stripe+Supabase; social = daily IG reels→Shorts→biweekly long-form lofi via social-brain MCP; submission-service legality = sell the REVIEW not the ADD, current scale too small to charge, on-ramp via SubmitHub/Groover (see Business model section). AI-music selling-rights research errored on rate-limit — re-run for Phase 3.
 - **2026-06-14** — Consolidated all HV material to a D: master workspace `D:\HIGHER VISION MUSIC\` (MATERIAL\AI MUSIC EMPIRE 14.69GB + MATERIAL\beats-HigherVisionMusic 1.16GB + BRAND-ASSETS 3.30GB logos/coverarts/mockups/IG + AITRACKLABSTUDIO 3.30GB [AI MUSIC & SAMPLES, PROMPT PACKS, BRANDKIT] + empty CONTENT\/EXPORTS\). All pulled via rclone `gdrive:` remote + hash-verified (0 diffs). Permanently deleted from Drive: AI MUSIC EMPIRE (after verify) + a 62GB personal backup (phone photos/retreat/doc-snapshots that were mislabeled inside `Higher Vision Music Assets/STORAGE`, not HV) → freed ~77GB on Drive (now ~19/100GB used). ⚠️ `AITRACKLABSTUDIO/proton-recovery-kit.pdf` = Proton recovery codes, keep private. Index at `D:\HIGHER VISION MUSIC\HV_WORKSPACE_README.md`. Real logos now local → ad-readiness pass unblocked.
+
+---
+
+## 🔓 SUNO WAV EXPORT — REVERSE-ENGINEERED (2026-06-16)
+
+**Goal:** mass-download true WAV (not MP3) for all beats off the Suno Pro account, no manual clicking.
+
+**The 3-step flow (captured via WebLoom network capture of one manual WAV download):**
+1. `POST https://studio-api-prod.suno.com/api/gen/{CLIP_ID}/convert_wav/` (body empty) -> `204`. Kicks off server-side WAV render.
+2. `GET  https://studio-api-prod.suno.com/api/gen/{CLIP_ID}/wav_file/` -> JSON, poll until ready (optional).
+3. `GET  https://cdn1.suno.ai/{CLIP_ID}.wav` -> the WAV, **served PUBLICLY once converted (NO auth header needed)**. ~27 MB, real RIFF.
+
+**Auth (steps 1-2 only):** three headers —
+- `authorization: Bearer <JWT>`  — get a fresh one IN-PAGE via `await window.Clerk.session.getToken()` (refreshes automatically; JWT exp ~1h, aud `suno-api`).
+- `device-id: 9a7dda28-0678-41f0-8d85-429e2dfc9786`
+- `browser-token: {"token":"<base64 of {\"timestamp\":<now_ms>}>"}`  (regenerate per request)
+
+**GOTCHAS / lessons:**
+- Direct guess `cdn1.suno.ai/{id}.wav` returns **403** until `convert_wav` has been called for that clip. After conversion it flips to 200 public.
+- WAVs **auto-expire ~2 days** (`x-amz-expiration ... rule-id=remove-file-with-wav-tag`). Convert + download promptly.
+- **Do NOT copy the JWT into a PowerShell command** — a signed token breaks on one mangled char -> 401 on all. Fire the authed steps (convert_wav) IN-BROWSER via `eval_js` (getToken is always valid + same-origin). Do the public CDN download from PowerShell (no auth, no token-corruption risk).
+- eval_js times out on ~58 sequential awaited POSTs + sleeps. Fire conversions in **parallel chunks** (`Promise.all`, chunk=12) -> ~10s for 58.
+- Library feed: `GET studio-api-prod.suno.com/api/feed/v2?page=N` -> `{clips, num_total_results, current_page, has_more}`, 20/page. Genre is in `clips[].metadata.tags`. Suno makes 2 variants per gen (same title twice, different ids) -> id8 prefix disambiguates filenames `Title_<id8>.wav`.
+
+**First batch:** Velvet Spokes -> Chrome Synapse = 58 boom-bap clips (both variants). Tags shift to ambient/dnb/break right after Chrome Synapse = the clean genre cutoff. Saved to `D:\HIGHER VISION MUSIC\HIGHER VISION UNRELEASD FOLDER`.

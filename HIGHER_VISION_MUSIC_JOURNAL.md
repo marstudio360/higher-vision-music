@@ -143,3 +143,97 @@ Higher Vision = **playlist network + AI-beat label + visualizer/YouTube channel 
 - Library feed: `GET studio-api-prod.suno.com/api/feed/v2?page=N` -> `{clips, num_total_results, current_page, has_more}`, 20/page. Genre is in `clips[].metadata.tags`. Suno makes 2 variants per gen (same title twice, different ids) -> id8 prefix disambiguates filenames `Title_<id8>.wav`.
 
 **First batch:** Velvet Spokes -> Chrome Synapse = 58 boom-bap clips (both variants). Tags shift to ambient/dnb/break right after Chrome Synapse = the clean genre cutoff. Saved to `D:\HIGHER VISION MUSIC\HIGHER VISION UNRELEASD FOLDER`.
+
+---
+
+## 🎛️ HEADLESS SUNO CONTROL + BEAT STORE v2 (2026-06-16)
+
+### Headless Suno controller — `D:\HIGHER VISION MUSIC\TOOLS\suno_control.py`
+Controls the Suno Pro account with NO browser. Cookie (`__client` refresh token, exp ~Jun 2027) mints session JWTs on demand. Vaulted as `suno-tracklabstudio`.
+Commands: `mint` | `feed [page]` | `convert <id...>` | `wav <id> <out>` | `wavbatch <manifest> <dir>`.
+Auth flow: GET `auth.suno.com/v1/client` then POST `.../sessions/{sid}/tokens`.
+
+### GOTCHAS (do NOT repeat these):
+1. **Clerk auth needs the FULL cookie as a `Cookie` header — NOT `Authorization: __client`.** The gcui-art code uses `Authorization`, but the current Suno/Clerk API IGNORES it and returns a fresh EMPTY client (`sessions: []`, different client_id). Sending the whole SUNO_COOKIE as `Cookie:` returns the real client + active session. This cost ~3 debugging rounds.
+2. **Cloudflare blocks urllib default User-Agent -> HTTP 403 "error code: 1010".** Must send a real browser UA + `sec-ch-ua*` headers on every request to auth.suno.com / studio-api. (Same class of bug as the AURAL ALCHEMY Resend 403.)
+3. **Suno MP3 download is only ~180 kbps VBR, NOT 320.** For true MP3 320, transcode from the WAV with ffmpeg (`-b:a 320k`). Never sell the raw Suno MP3 as "320".
+4. **WAVs expire ~2 days on cdn1.suno.ai** (`x-amz-expiration ... remove-file-with-wav-tag`). Convert + download promptly.
+5. **eval_js times out on long sequential loops** (58 awaited POSTs + sleeps). Fire in parallel chunks (`Promise.all`, chunk=12) OR move the work to Python/PowerShell.
+6. **PowerShell: do NOT pass a here-string inline to a native command** (`git commit -m @'...'@`). PS 5.1 word-splits it (git saw `&`, `Good`, `Vibes` as separate pathspecs). FIX: assign the here-string to a variable first, OR use a simple single-line `-m "..."` (no `&`, no inner double-quotes) + a second `-m` for the trailer, OR `git commit -F file`.
+
+### Beat store v2 — pipeline + files
+- `TOOLS/build_store.py` — from the 58 WAVs: makes MP3 320 + 30s preview each, writes `catalog.json` (3 tiers), prunes orphan previews, syncs free downloads. Idempotent.
+- `TOOLS/stage_r2.py` — slug-names the WAVs, prunes orphans (for R2).
+- `TOOLS/name_overrides.py` — clip-id -> distinct name map (renamed the 16 generic "Smooth & Good Vibes" Suno auto-titles to Dusk Lacquer, Asphalt Silk, Brass Lullaby, Ivory Exhaust, Slate Citrus, Mellow Concrete, etc.).
+- Source WAVs: `D:\HIGHER VISION MUSIC\HIGHER VISION UNRELEASD FOLDER` (58, Velvet Spokes -> Chrome Synapse, the clean boom-bap block; DnB/ambient starts right after).
+
+### LICENSE MODEL (locked, plain language — no fractal-themed names):
+- **Free** ($0): non-monetized use, credit "prod. Higher Vision", funnels to Commercial. (3 free lead-magnet beats: dusk-lacquer, lean-groove, soul-of-the-game.)
+- **Commercial License** ($20): WAV + MP3 320. Make it yours (rap/sing/play/sample/flip/remix) + use ANYWHERE (songs, video, film, ads, games, apps, podcasts) + sell your finished work, keep 100%. ONLY rule: don't resell/re-upload the bare beat as-is. Non-exclusive. Aimed at ALL creators, not just musicians.
+- **Full Buyout** ($97): exclusive, full rights, we DELETE it from our YouTube + Spotify, site shows SOLD OUT.
+
+### DEPLOY TARGETS (both live):
+- **Vercel (primary clean URL): https://higher-vision-music.vercel.app** — folder `NANO VIBE CODING\higher-vision-music`, deploy `& "D:\npm-global\vercel.cmd" --cwd <dst> deploy --prod --yes` (vercel NOT on PATH; use full path). vercel-linked (.vercel/project.json).
+- GH Pages: `marstudio360/higher-vision-music` (canonical repo `NANO VIBE CODING\HIGHER VISION MUSIC`) -> https://marstudio360.github.io/higher-vision-music/
+- R2 (gated full files): bucket `aa-products`, keys `higher-vision/beats/wav/<slug>.wav` + `higher-vision/beats/mp3320/<slug>.mp3` (58 each). Private; delivery via signed URLs after Stripe (TODO).
+
+### NEXT PIPELINE (Mariano's plan): beat -> YouTube visualizer video + Shorts -> upload YouTube -> upload IG via social-brain MCP. **First crack = headless visualizer GENERATION** (render an audio-reactive mp4 + vertical short from a beat using the generative-studio /visualizer engine, automated).
+
+### STILL PENDING: Stripe ($20/$97) + gated delivery; buyout fulfillment (pull from YT/Spotify + SOLD OUT); free-beats YouTube campaign + email capture; visualizer generation crack; auto-gen cron.
+
+---
+
+## 🎆 MEGA VISUALIZER ENGINE (2026-06-16)
+
+Standalone offline audio-reactive visualizer. NOT generative-studio (those are WebGL/browser; driving them offline is fragile). Pure Python: numpy + cv2 + ffmpeg pipe. `D:\HIGHER VISION MUSIC\TOOLS\mega_viz.py`.
+Usage: `python mega_viz.py <style> <slug> [start] [dur] [W] [H]`  (W/H args -> 4K later; default 1920x1080/60fps).
+
+**Pipeline:** decode beat (soundfile) -> per-frame FFT (128 log bands, snappy-attack/smooth-release) + bass/mid/high + spectral-flux onset -> draw emissive "light" buffer -> feedback accum (motion-blur trails) -> multi-scale bloom -> radial chromatic aberration (bass-pumped) -> vignette + grain -> pipe raw bgr24 to ffmpeg (libx264 crf16 + aac 320k, muxed with -ss/-t audio).
+
+**4 styles:** radial (mirrored spectrum + bass core), tunnel (morphing wormhole into Z-depth — STUNNER), terrain (perspective spectrum landscape — STUNNER), nebula (curl-noise particle field).
+
+**LESSONS (visual tuning — don't repeat):**
+- Run as a SCRIPT FILE, never `python -c`, or the `inspect.py` in NANO VIBE CODING root shadows stdlib and breaks numpy import. (script mode keeps cwd off sys.path.)
+- Geometry styles (lines/polylines) look great immediately. **Particle systems are HARD:** took 7 passes. Failure modes seen: (1) convergent flow field herds all particles into a few comet-streaks -> use CURL noise (divergence-free) + continuous respawn for uniform density; (2) single-pixel additive dust = too dim -> splat into a HALF-RES buffer then upscale (4x density); (3) brightness chained to instantaneous energy oscillates dim<->blown across loud/quiet beat sections -> **exposure TONE-MAP `255*(1-exp(-x/E))`** lifts shadows + compresses highlights = balanced at any energy; (4) tone-map desaturates toward white -> add saturation punch `g+(out-g)*2.0`.
+- PowerShell: `python ... 2>&1 | Select-Object` reports exit 1 from ffmpeg stderr-wrapping even on success; check for "DONE ->" in output instead of exit code.
+
+**OUTPUT:** `D:\HIGHER VISION MUSIC\HIGHER VISION UNRELEASD FOLDER\_viz_preview\<slug>_<style>.mp4` + 3 stills each.
+**NEXT:** lock hero styles -> 9:16 Shorts + full-song length + 4K flag + batch all 58 -> wrap as visualizer MCP -> pipeline to YouTube + IG (social-brain).
+
+---
+
+## 🏆 HERO VISUALIZER ENGINE + WORKFLOW (2026-06-16)
+
+**Mariano locked the RADIAL lane as the hero** (mirrored reactive spectrum + glowing bass core + HV wordmark). Tunnel = approved as a 2nd template (de-spastic: slower z-travel/rotation, gentler wall mod). Terrain/nebula = parked.
+
+**Engine:** `D:\HIGHER VISION MUSIC\TOOLS\viz_hero.py <style> <slug> [start] [dur] [W] [H]`
+- styles: `radial` | `tunnel`; both render the centered **HIGHER VISION MUSIC** wordmark.
+- W/H args = 4K-ready (geometry scales by H/1080); default 1920x1080/60, crf17, aac320, audio via -ss/-t.
+- TITLE made thumbnail-readable: bright text + dark stroke + a **localized dark halo behind the glyphs** (`tshadow`) so it reads over a bright pumping core WITHOUT killing the core glow Mariano loves; plus a soft bass-reactive `tglow`.
+- (Older `viz_radial.py` + `mega_viz.py` kept; `viz_hero.py` is the canonical one going forward / future MCP base.)
+
+**FOLDERS:**
+- `_viz_preview\` — all preview renders + QC stills (`<slug>_<style>_hero.mp4` + `_sN.png`).
+- `_READY_TO_UPSCALE\` — look-approved videos staged for 4K full-length re-render.
+
+**BEAT-USAGE TRACKER:** `D:\HIGHER VISION MUSIC\VIZ_TRACKER.md` — one beat = one video, NEVER reuse a beat for a new YouTube video. Used so far (radial): velvet-spokes, chrome-synapse, brass-lullaby, soul-of-the-game, velvet-clutch, asphalt-silk, dusk-lacquer; (tunnel): concrete-skyline, ivory-exhaust. Check the table before any new render.
+
+**PLAN:** lock look -> render heroes 4K full-song -> batch -> wrap viz_hero as an MCP -> pipeline beat→video→YouTube + IG (social-brain). 4K is the goal; 1080 for now.
+
+**LESSON:** title legibility on a bright reactive core = localized dark halo behind glyphs (not a global dim, which would kill the glow). Render scripts as files (inspect.py shadow). Check "DONE ->" not exit code (ffmpeg stderr wrap).
+
+---
+
+## 🎛️ LIVE VISUALIZER STUDIO (in-website, 2026-06-16)
+
+Mariano's design loop: tune the look LIVE in the browser, Export settings JSON, then I auto-render the offline 4K full-song version matching exactly.
+
+- Page: `viz-studio.html` (HV repo root). Live: https://higher-vision-music.vercel.app/viz-studio.html (+ GH Pages mirror).
+- Real-time canvas 2D + Web Audio API (AnalyserNode fftSize 4096 -> log bands). Bloom = offscreen canvas + `ctx.filter=blur()` composited 'lighter'; trails = semi-transparent fill each frame.
+- Styles: radial + tunnel (mirror of the offline engines). Controls: sensitivity, glow, rotation, bars, trails, particles, palette (teal/ice/sunset), title text+show, player-UI toggle (waveform/time/NOW PLAYING/SLOW BOOMBAP/@highervisionmusic). NO domain CTA yet (add after purchase).
+- Library: dropdown from `catalog.json` (plays `beats-preview/<slug>.mp3`, 30s) + "Load file" for full local tracks.
+- Export -> `<slug>_settings.json` ({style,sens,glow,rot,bars,trail,particles,palette,tshow,tmain,ttrack,tplayer,beat}).
+
+**TODO (offline link):** wire `viz_player.py` to accept a settings JSON so web design == offline render 1:1. Then batch + 4K.
+
+Offline engines so far: `viz_player.py` (immersive: animated title, track name, waveform seek bar, time, spinning vinyl, BPM auto-detect, beat-zoom, chroma pump) · `viz_hero.py` (radial+tunnel, hi-contrast title) · `mega_viz.py` (4 styles). BPM detect via onset-envelope autocorrelation (got 88 BPM on midnight-ledger).

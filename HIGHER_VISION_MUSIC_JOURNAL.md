@@ -255,3 +255,5 @@ Offline engines so far: `viz_player.py` (immersive: animated title, track name, 
 3. Genre tag -> **BEAT NN** (from beatNo arg).
 
 **Still TODO:** add the offline render look as a TEMPLATE inside viz-studio.html (Mariano prefers the renders over the current crisp studio look — keep the studio look too, add render look as another template). Wire exported settings JSON -> viz_player.py.
+
+**NAMES APPLIED 2026-06-16:** Mariano approved. apply_names.py renamed 37 beats across catalog.json + beats-preview + free + local mp3-320/wav-slug; R2 re-synced; all 58 carry num 01-58; studio shows BEAT NN. Free beats now: 07 Dusk Lacquer, 33 Gold Circuit, 49 Soul of the Game. Deployed GH+Vercel.

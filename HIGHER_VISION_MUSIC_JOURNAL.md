@@ -237,3 +237,21 @@ Mariano's design loop: tune the look LIVE in the browser, Export settings JSON, 
 **TODO (offline link):** wire `viz_player.py` to accept a settings JSON so web design == offline render 1:1. Then batch + 4K.
 
 Offline engines so far: `viz_player.py` (immersive: animated title, track name, waveform seek bar, time, spinning vinyl, BPM auto-detect, beat-zoom, chroma pump) · `viz_hero.py` (radial+tunnel, hi-contrast title) · `mega_viz.py` (4 styles). BPM detect via onset-envelope autocorrelation (got 88 BPM on midnight-ledger).
+
+---
+
+## 🔢 BEAT NUMBERS + NAME PASS + PLAYER ENGINE v2 (2026-06-16)
+
+**Beat numbering:** all 58 beats get a stable number BEAT 01..58 (catalog order). Videos now show **BEAT NN** instead of "SLOW BOOMBAP" (Mariano: number the beats for tracking, drop the genre tag). Passed to engine as 7th arg `beatNo`.
+
+**Name pass (PENDING Mariano approval):** master table in `D:\HIGHER VISION MUSIC\VIZ_TRACKER.md`.
+- 11 beats used in videos = names LOCKED (velvet-spokes, dusk-lacquer, asphalt-silk, midnight-ledger, cobalt-cruise, brass-lullaby, ivory-exhaust, concrete-skyline, soul-of-the-game, velvet-clutch, chrome-synapse).
+- 10 already-cool kept (marble-drift, linen-smoke, cashmere-static, suede-horizon, velour-transit, glass-denim, amber-cassette, satin-gravel, slate-citrus, mellow-concrete).
+- 37 generic/duplicate "X 2/3/4" -> proposed fresh two-word names (Copper Haze, Bronze Alley, Onyx Drift, ... Saddle Smoke). On approval: rename catalog.json + preview files + R2 keys + tracker. DO NOT rename used/locked beats.
+
+**viz_player.py v2 fixes (Mariano feedback on renders):**
+1. Top tags were too DIM -> root cause: vignette + beat-zoom were applied AFTER the UI/title, darkening + wobbling the corner tags. FIX: apply beat-zoom + vignette to the VISUAL first, THEN composite UI + title on top (bright + stable). Also brightened tag colors + bigger dark stroke.
+2. Removed the spinning vinyl -> replaced with the **track name on top of the audio bar** (left).
+3. Genre tag -> **BEAT NN** (from beatNo arg).
+
+**Still TODO:** add the offline render look as a TEMPLATE inside viz-studio.html (Mariano prefers the renders over the current crisp studio look — keep the studio look too, add render look as another template). Wire exported settings JSON -> viz_player.py.

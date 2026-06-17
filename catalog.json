@@ -27,47 +27,53 @@
       "preview": "beats-preview/velvet-spokes.mp3",
       "wav_key": "higher-vision/beats/wav/velvet-spokes.wav",
       "mp3_key": "higher-vision/beats/mp3320/velvet-spokes.mp3",
-      "free": false
+      "free": false,
+      "num": "01"
     },
     {
-      "title": "Velvet Spokes 2",
-      "slug": "velvet-spokes-2",
-      "preview": "beats-preview/velvet-spokes-2.mp3",
-      "wav_key": "higher-vision/beats/wav/velvet-spokes-2.wav",
-      "mp3_key": "higher-vision/beats/mp3320/velvet-spokes-2.mp3",
-      "free": false
+      "title": "Copper Haze",
+      "slug": "copper-haze",
+      "preview": "beats-preview/copper-haze.mp3",
+      "wav_key": "higher-vision/beats/wav/copper-haze.wav",
+      "mp3_key": "higher-vision/beats/mp3320/copper-haze.mp3",
+      "free": false,
+      "num": "02"
     },
     {
-      "title": "Velvet Pistons",
-      "slug": "velvet-pistons",
-      "preview": "beats-preview/velvet-pistons.mp3",
-      "wav_key": "higher-vision/beats/wav/velvet-pistons.wav",
-      "mp3_key": "higher-vision/beats/mp3320/velvet-pistons.mp3",
-      "free": false
+      "title": "Bronze Alley",
+      "slug": "bronze-alley",
+      "preview": "beats-preview/bronze-alley.mp3",
+      "wav_key": "higher-vision/beats/wav/bronze-alley.wav",
+      "mp3_key": "higher-vision/beats/mp3320/bronze-alley.mp3",
+      "free": false,
+      "num": "03"
     },
     {
-      "title": "Velvet Pistons 2",
-      "slug": "velvet-pistons-2",
-      "preview": "beats-preview/velvet-pistons-2.mp3",
-      "wav_key": "higher-vision/beats/wav/velvet-pistons-2.wav",
-      "mp3_key": "higher-vision/beats/mp3320/velvet-pistons-2.mp3",
-      "free": false
+      "title": "Onyx Drift",
+      "slug": "onyx-drift",
+      "preview": "beats-preview/onyx-drift.mp3",
+      "wav_key": "higher-vision/beats/wav/onyx-drift.wav",
+      "mp3_key": "higher-vision/beats/mp3320/onyx-drift.mp3",
+      "free": false,
+      "num": "04"
     },
     {
-      "title": "Velcro Heartbeat",
-      "slug": "velcro-heartbeat",
-      "preview": "beats-preview/velcro-heartbeat.mp3",
-      "wav_key": "higher-vision/beats/wav/velcro-heartbeat.wav",
-      "mp3_key": "higher-vision/beats/mp3320/velcro-heartbeat.mp3",
-      "free": false
+      "title": "Jade Lantern",
+      "slug": "jade-lantern",
+      "preview": "beats-preview/jade-lantern.mp3",
+      "wav_key": "higher-vision/beats/wav/jade-lantern.wav",
+      "mp3_key": "higher-vision/beats/mp3320/jade-lantern.mp3",
+      "free": false,
+      "num": "05"
     },
     {
-      "title": "Velcro Heartbeat 2",
-      "slug": "velcro-heartbeat-2",
-      "preview": "beats-preview/velcro-heartbeat-2.mp3",
-      "wav_key": "higher-vision/beats/wav/velcro-heartbeat-2.wav",
-      "mp3_key": "higher-vision/beats/mp3320/velcro-heartbeat-2.mp3",
-      "free": false
+      "title": "Sable Hour",
+      "slug": "sable-hour",
+      "preview": "beats-preview/sable-hour.mp3",
+      "wav_key": "higher-vision/beats/wav/sable-hour.wav",
+      "mp3_key": "higher-vision/beats/mp3320/sable-hour.mp3",
+      "free": false,
+      "num": "06"
     },
     {
       "title": "Dusk Lacquer",
@@ -75,7 +81,8 @@
       "preview": "beats-preview/dusk-lacquer.mp3",
       "wav_key": "higher-vision/beats/wav/dusk-lacquer.wav",
       "mp3_key": "higher-vision/beats/mp3320/dusk-lacquer.mp3",
-      "free": true
+      "free": true,
+      "num": "07"
     },
     {
       "title": "Asphalt Silk",
@@ -83,39 +90,44 @@
       "preview": "beats-preview/asphalt-silk.mp3",
       "wav_key": "higher-vision/beats/wav/asphalt-silk.wav",
       "mp3_key": "higher-vision/beats/mp3320/asphalt-silk.mp3",
-      "free": false
+      "free": false,
+      "num": "08"
     },
     {
-      "title": "Gadget Rain",
-      "slug": "gadget-rain",
-      "preview": "beats-preview/gadget-rain.mp3",
-      "wav_key": "higher-vision/beats/wav/gadget-rain.wav",
-      "mp3_key": "higher-vision/beats/mp3320/gadget-rain.mp3",
-      "free": false
+      "title": "Indigo Lane",
+      "slug": "indigo-lane",
+      "preview": "beats-preview/indigo-lane.mp3",
+      "wav_key": "higher-vision/beats/wav/indigo-lane.wav",
+      "mp3_key": "higher-vision/beats/mp3320/indigo-lane.mp3",
+      "free": false,
+      "num": "09"
     },
     {
-      "title": "Gadget Rain 2",
-      "slug": "gadget-rain-2",
-      "preview": "beats-preview/gadget-rain-2.mp3",
-      "wav_key": "higher-vision/beats/wav/gadget-rain-2.wav",
-      "mp3_key": "higher-vision/beats/mp3320/gadget-rain-2.mp3",
-      "free": false
+      "title": "Pearl Rooftop",
+      "slug": "pearl-rooftop",
+      "preview": "beats-preview/pearl-rooftop.mp3",
+      "wav_key": "higher-vision/beats/wav/pearl-rooftop.wav",
+      "mp3_key": "higher-vision/beats/mp3320/pearl-rooftop.mp3",
+      "free": false,
+      "num": "10"
     },
     {
-      "title": "Minty Concrete",
-      "slug": "minty-concrete",
-      "preview": "beats-preview/minty-concrete.mp3",
-      "wav_key": "higher-vision/beats/wav/minty-concrete.wav",
-      "mp3_key": "higher-vision/beats/mp3320/minty-concrete.mp3",
-      "free": false
+      "title": "Leather Signal",
+      "slug": "leather-signal",
+      "preview": "beats-preview/leather-signal.mp3",
+      "wav_key": "higher-vision/beats/wav/leather-signal.wav",
+      "mp3_key": "higher-vision/beats/mp3320/leather-signal.mp3",
+      "free": false,
+      "num": "11"
     },
     {
-      "title": "Minty Concrete 2",
-      "slug": "minty-concrete-2",
-      "preview": "beats-preview/minty-concrete-2.mp3",
-      "wav_key": "higher-vision/beats/wav/minty-concrete-2.wav",
-      "mp3_key": "higher-vision/beats/mp3320/minty-concrete-2.mp3",
-      "free": false
+      "title": "Oak Bloom",
+      "slug": "oak-bloom",
+      "preview": "beats-preview/oak-bloom.mp3",
+      "wav_key": "higher-vision/beats/wav/oak-bloom.wav",
+      "mp3_key": "higher-vision/beats/mp3320/oak-bloom.mp3",
+      "free": false,
+      "num": "12"
     },
     {
       "title": "Marble Drift",
@@ -123,7 +135,8 @@
       "preview": "beats-preview/marble-drift.mp3",
       "wav_key": "higher-vision/beats/wav/marble-drift.wav",
       "mp3_key": "higher-vision/beats/mp3320/marble-drift.mp3",
-      "free": false
+      "free": false,
+      "num": "13"
     },
     {
       "title": "Linen Smoke",
@@ -131,7 +144,8 @@
       "preview": "beats-preview/linen-smoke.mp3",
       "wav_key": "higher-vision/beats/wav/linen-smoke.wav",
       "mp3_key": "higher-vision/beats/mp3320/linen-smoke.mp3",
-      "free": false
+      "free": false,
+      "num": "14"
     },
     {
       "title": "Cashmere Static",
@@ -139,7 +153,8 @@
       "preview": "beats-preview/cashmere-static.mp3",
       "wav_key": "higher-vision/beats/wav/cashmere-static.wav",
       "mp3_key": "higher-vision/beats/mp3320/cashmere-static.mp3",
-      "free": false
+      "free": false,
+      "num": "15"
     },
     {
       "title": "Midnight Ledger",
@@ -147,39 +162,44 @@
       "preview": "beats-preview/midnight-ledger.mp3",
       "wav_key": "higher-vision/beats/wav/midnight-ledger.wav",
       "mp3_key": "higher-vision/beats/mp3320/midnight-ledger.mp3",
-      "free": false
+      "free": false,
+      "num": "16"
     },
     {
-      "title": "Velvet Pistons 3",
-      "slug": "velvet-pistons-3",
-      "preview": "beats-preview/velvet-pistons-3.mp3",
-      "wav_key": "higher-vision/beats/wav/velvet-pistons-3.wav",
-      "mp3_key": "higher-vision/beats/mp3320/velvet-pistons-3.mp3",
-      "free": false
+      "title": "Ash Boulevard",
+      "slug": "ash-boulevard",
+      "preview": "beats-preview/ash-boulevard.mp3",
+      "wav_key": "higher-vision/beats/wav/ash-boulevard.wav",
+      "mp3_key": "higher-vision/beats/mp3320/ash-boulevard.mp3",
+      "free": false,
+      "num": "17"
     },
     {
-      "title": "Velvet Pistons 4",
-      "slug": "velvet-pistons-4",
-      "preview": "beats-preview/velvet-pistons-4.mp3",
-      "wav_key": "higher-vision/beats/wav/velvet-pistons-4.wav",
-      "mp3_key": "higher-vision/beats/mp3320/velvet-pistons-4.mp3",
-      "free": false
+      "title": "Smoke District",
+      "slug": "smoke-district",
+      "preview": "beats-preview/smoke-district.mp3",
+      "wav_key": "higher-vision/beats/wav/smoke-district.wav",
+      "mp3_key": "higher-vision/beats/mp3320/smoke-district.mp3",
+      "free": false,
+      "num": "18"
     },
     {
-      "title": "Chrome Warranty",
-      "slug": "chrome-warranty",
-      "preview": "beats-preview/chrome-warranty.mp3",
-      "wav_key": "higher-vision/beats/wav/chrome-warranty.wav",
-      "mp3_key": "higher-vision/beats/mp3320/chrome-warranty.mp3",
-      "free": false
+      "title": "Granite Glow",
+      "slug": "granite-glow",
+      "preview": "beats-preview/granite-glow.mp3",
+      "wav_key": "higher-vision/beats/wav/granite-glow.wav",
+      "mp3_key": "higher-vision/beats/mp3320/granite-glow.mp3",
+      "free": false,
+      "num": "19"
     },
     {
-      "title": "Chrome Warranty 2",
-      "slug": "chrome-warranty-2",
-      "preview": "beats-preview/chrome-warranty-2.mp3",
-      "wav_key": "higher-vision/beats/wav/chrome-warranty-2.wav",
-      "mp3_key": "higher-vision/beats/mp3320/chrome-warranty-2.mp3",
-      "free": false
+      "title": "Quartz Tide",
+      "slug": "quartz-tide",
+      "preview": "beats-preview/quartz-tide.mp3",
+      "wav_key": "higher-vision/beats/wav/quartz-tide.wav",
+      "mp3_key": "higher-vision/beats/mp3320/quartz-tide.mp3",
+      "free": false,
+      "num": "20"
     },
     {
       "title": "Suede Horizon",
@@ -187,7 +207,8 @@
       "preview": "beats-preview/suede-horizon.mp3",
       "wav_key": "higher-vision/beats/wav/suede-horizon.wav",
       "mp3_key": "higher-vision/beats/mp3320/suede-horizon.mp3",
-      "free": false
+      "free": false,
+      "num": "21"
     },
     {
       "title": "Velour Transit",
@@ -195,23 +216,26 @@
       "preview": "beats-preview/velour-transit.mp3",
       "wav_key": "higher-vision/beats/wav/velour-transit.wav",
       "mp3_key": "higher-vision/beats/mp3320/velour-transit.mp3",
-      "free": false
+      "free": false,
+      "num": "22"
     },
     {
-      "title": "Concrete Citrus",
-      "slug": "concrete-citrus",
-      "preview": "beats-preview/concrete-citrus.mp3",
-      "wav_key": "higher-vision/beats/wav/concrete-citrus.wav",
-      "mp3_key": "higher-vision/beats/mp3320/concrete-citrus.mp3",
-      "free": false
+      "title": "Ember Sky",
+      "slug": "ember-sky",
+      "preview": "beats-preview/ember-sky.mp3",
+      "wav_key": "higher-vision/beats/wav/ember-sky.wav",
+      "mp3_key": "higher-vision/beats/mp3320/ember-sky.mp3",
+      "free": false,
+      "num": "23"
     },
     {
-      "title": "Concrete Citrus 2",
-      "slug": "concrete-citrus-2",
-      "preview": "beats-preview/concrete-citrus-2.mp3",
-      "wav_key": "higher-vision/beats/wav/concrete-citrus-2.wav",
-      "mp3_key": "higher-vision/beats/mp3320/concrete-citrus-2.mp3",
-      "free": false
+      "title": "Twilight Gears",
+      "slug": "twilight-gears",
+      "preview": "beats-preview/twilight-gears.mp3",
+      "wav_key": "higher-vision/beats/wav/twilight-gears.wav",
+      "mp3_key": "higher-vision/beats/mp3320/twilight-gears.mp3",
+      "free": false,
+      "num": "24"
     },
     {
       "title": "Glass Denim",
@@ -219,7 +243,8 @@
       "preview": "beats-preview/glass-denim.mp3",
       "wav_key": "higher-vision/beats/wav/glass-denim.wav",
       "mp3_key": "higher-vision/beats/mp3320/glass-denim.mp3",
-      "free": false
+      "free": false,
+      "num": "25"
     },
     {
       "title": "Amber Cassette",
@@ -227,7 +252,8 @@
       "preview": "beats-preview/amber-cassette.mp3",
       "wav_key": "higher-vision/beats/wav/amber-cassette.wav",
       "mp3_key": "higher-vision/beats/mp3320/amber-cassette.mp3",
-      "free": false
+      "free": false,
+      "num": "26"
     },
     {
       "title": "Satin Gravel",
@@ -235,7 +261,8 @@
       "preview": "beats-preview/satin-gravel.mp3",
       "wav_key": "higher-vision/beats/wav/satin-gravel.wav",
       "mp3_key": "higher-vision/beats/mp3320/satin-gravel.mp3",
-      "free": false
+      "free": false,
+      "num": "27"
     },
     {
       "title": "Cobalt Cruise",
@@ -243,87 +270,98 @@
       "preview": "beats-preview/cobalt-cruise.mp3",
       "wav_key": "higher-vision/beats/wav/cobalt-cruise.wav",
       "mp3_key": "higher-vision/beats/mp3320/cobalt-cruise.mp3",
-      "free": false
+      "free": false,
+      "num": "28"
     },
     {
-      "title": "Citrus Cement",
-      "slug": "citrus-cement",
-      "preview": "beats-preview/citrus-cement.mp3",
-      "wav_key": "higher-vision/beats/wav/citrus-cement.wav",
-      "mp3_key": "higher-vision/beats/mp3320/citrus-cement.mp3",
-      "free": false
+      "title": "Rust Current",
+      "slug": "rust-current",
+      "preview": "beats-preview/rust-current.mp3",
+      "wav_key": "higher-vision/beats/wav/rust-current.wav",
+      "mp3_key": "higher-vision/beats/mp3320/rust-current.mp3",
+      "free": false,
+      "num": "29"
     },
     {
-      "title": "Citrus Cement 2",
-      "slug": "citrus-cement-2",
-      "preview": "beats-preview/citrus-cement-2.mp3",
-      "wav_key": "higher-vision/beats/wav/citrus-cement-2.wav",
-      "mp3_key": "higher-vision/beats/mp3320/citrus-cement-2.mp3",
-      "free": false
+      "title": "Tin Echo",
+      "slug": "tin-echo",
+      "preview": "beats-preview/tin-echo.mp3",
+      "wav_key": "higher-vision/beats/wav/tin-echo.wav",
+      "mp3_key": "higher-vision/beats/mp3320/tin-echo.mp3",
+      "free": false,
+      "num": "30"
     },
     {
-      "title": "Lean Motion",
-      "slug": "lean-motion",
-      "preview": "beats-preview/lean-motion.mp3",
-      "wav_key": "higher-vision/beats/wav/lean-motion.wav",
-      "mp3_key": "higher-vision/beats/mp3320/lean-motion.mp3",
-      "free": false
+      "title": "Cedar Mist",
+      "slug": "cedar-mist",
+      "preview": "beats-preview/cedar-mist.mp3",
+      "wav_key": "higher-vision/beats/wav/cedar-mist.wav",
+      "mp3_key": "higher-vision/beats/mp3320/cedar-mist.mp3",
+      "free": false,
+      "num": "31"
     },
     {
-      "title": "Lean Motion 2",
-      "slug": "lean-motion-2",
-      "preview": "beats-preview/lean-motion-2.mp3",
-      "wav_key": "higher-vision/beats/wav/lean-motion-2.wav",
-      "mp3_key": "higher-vision/beats/mp3320/lean-motion-2.mp3",
-      "free": false
+      "title": "Maple Sway",
+      "slug": "maple-sway",
+      "preview": "beats-preview/maple-sway.mp3",
+      "wav_key": "higher-vision/beats/wav/maple-sway.wav",
+      "mp3_key": "higher-vision/beats/mp3320/maple-sway.mp3",
+      "free": false,
+      "num": "32"
     },
     {
-      "title": "Lean Groove",
-      "slug": "lean-groove",
-      "preview": "beats-preview/lean-groove.mp3",
-      "wav_key": "higher-vision/beats/wav/lean-groove.wav",
-      "mp3_key": "higher-vision/beats/mp3320/lean-groove.mp3",
-      "free": true
+      "title": "Gold Circuit",
+      "slug": "gold-circuit",
+      "preview": "beats-preview/gold-circuit.mp3",
+      "wav_key": "higher-vision/beats/wav/gold-circuit.wav",
+      "mp3_key": "higher-vision/beats/mp3320/gold-circuit.mp3",
+      "free": true,
+      "num": "33"
     },
     {
-      "title": "Lean Groove 2",
-      "slug": "lean-groove-2",
-      "preview": "beats-preview/lean-groove-2.mp3",
-      "wav_key": "higher-vision/beats/wav/lean-groove-2.wav",
-      "mp3_key": "higher-vision/beats/mp3320/lean-groove-2.mp3",
-      "free": false
+      "title": "Wool Nocturne",
+      "slug": "wool-nocturne",
+      "preview": "beats-preview/wool-nocturne.mp3",
+      "wav_key": "higher-vision/beats/wav/wool-nocturne.wav",
+      "mp3_key": "higher-vision/beats/mp3320/wool-nocturne.mp3",
+      "free": false,
+      "num": "34"
     },
     {
-      "title": "Lean and Smooth",
-      "slug": "lean-and-smooth",
-      "preview": "beats-preview/lean-and-smooth.mp3",
-      "wav_key": "higher-vision/beats/wav/lean-and-smooth.wav",
-      "mp3_key": "higher-vision/beats/mp3320/lean-and-smooth.mp3",
-      "free": false
+      "title": "Cinder Lull",
+      "slug": "cinder-lull",
+      "preview": "beats-preview/cinder-lull.mp3",
+      "wav_key": "higher-vision/beats/wav/cinder-lull.wav",
+      "mp3_key": "higher-vision/beats/mp3320/cinder-lull.mp3",
+      "free": false,
+      "num": "35"
     },
     {
-      "title": "Lean and Smooth 2",
-      "slug": "lean-and-smooth-2",
-      "preview": "beats-preview/lean-and-smooth-2.mp3",
-      "wav_key": "higher-vision/beats/wav/lean-and-smooth-2.wav",
-      "mp3_key": "higher-vision/beats/mp3320/lean-and-smooth-2.mp3",
-      "free": false
+      "title": "Zinc Corner",
+      "slug": "zinc-corner",
+      "preview": "beats-preview/zinc-corner.mp3",
+      "wav_key": "higher-vision/beats/wav/zinc-corner.wav",
+      "mp3_key": "higher-vision/beats/mp3320/zinc-corner.mp3",
+      "free": false,
+      "num": "36"
     },
     {
-      "title": "Lean Groove 3",
-      "slug": "lean-groove-3",
-      "preview": "beats-preview/lean-groove-3.mp3",
-      "wav_key": "higher-vision/beats/wav/lean-groove-3.wav",
-      "mp3_key": "higher-vision/beats/mp3320/lean-groove-3.mp3",
-      "free": false
+      "title": "Opal Vapor",
+      "slug": "opal-vapor",
+      "preview": "beats-preview/opal-vapor.mp3",
+      "wav_key": "higher-vision/beats/wav/opal-vapor.wav",
+      "mp3_key": "higher-vision/beats/mp3320/opal-vapor.mp3",
+      "free": false,
+      "num": "37"
     },
     {
-      "title": "Lean Groove 4",
-      "slug": "lean-groove-4",
-      "preview": "beats-preview/lean-groove-4.mp3",
-      "wav_key": "higher-vision/beats/wav/lean-groove-4.wav",
-      "mp3_key": "higher-vision/beats/mp3320/lean-groove-4.mp3",
-      "free": false
+      "title": "Topaz Avenue",
+      "slug": "topaz-avenue",
+      "preview": "beats-preview/topaz-avenue.mp3",
+      "wav_key": "higher-vision/beats/wav/topaz-avenue.wav",
+      "mp3_key": "higher-vision/beats/mp3320/topaz-avenue.mp3",
+      "free": false,
+      "num": "38"
     },
     {
       "title": "Brass Lullaby",
@@ -331,7 +369,8 @@
       "preview": "beats-preview/brass-lullaby.mp3",
       "wav_key": "higher-vision/beats/wav/brass-lullaby.wav",
       "mp3_key": "higher-vision/beats/mp3320/brass-lullaby.mp3",
-      "free": false
+      "free": false,
+      "num": "39"
     },
     {
       "title": "Ivory Exhaust",
@@ -339,7 +378,8 @@
       "preview": "beats-preview/ivory-exhaust.mp3",
       "wav_key": "higher-vision/beats/wav/ivory-exhaust.wav",
       "mp3_key": "higher-vision/beats/mp3320/ivory-exhaust.mp3",
-      "free": false
+      "free": false,
+      "num": "40"
     },
     {
       "title": "Slate Citrus",
@@ -347,7 +387,8 @@
       "preview": "beats-preview/slate-citrus.mp3",
       "wav_key": "higher-vision/beats/wav/slate-citrus.wav",
       "mp3_key": "higher-vision/beats/mp3320/slate-citrus.mp3",
-      "free": false
+      "free": false,
+      "num": "41"
     },
     {
       "title": "Mellow Concrete",
@@ -355,39 +396,44 @@
       "preview": "beats-preview/mellow-concrete.mp3",
       "wav_key": "higher-vision/beats/wav/mellow-concrete.wav",
       "mp3_key": "higher-vision/beats/mp3320/mellow-concrete.mp3",
-      "free": false
+      "free": false,
+      "num": "42"
     },
     {
-      "title": "Concrete Citrus 3",
-      "slug": "concrete-citrus-3",
-      "preview": "beats-preview/concrete-citrus-3.mp3",
-      "wav_key": "higher-vision/beats/wav/concrete-citrus-3.wav",
-      "mp3_key": "higher-vision/beats/mp3320/concrete-citrus-3.mp3",
-      "free": false
+      "title": "Dune Fog",
+      "slug": "dune-fog",
+      "preview": "beats-preview/dune-fog.mp3",
+      "wav_key": "higher-vision/beats/wav/dune-fog.wav",
+      "mp3_key": "higher-vision/beats/mp3320/dune-fog.mp3",
+      "free": false,
+      "num": "43"
     },
     {
-      "title": "Concrete Citrus 4",
-      "slug": "concrete-citrus-4",
-      "preview": "beats-preview/concrete-citrus-4.mp3",
-      "wav_key": "higher-vision/beats/wav/concrete-citrus-4.wav",
-      "mp3_key": "higher-vision/beats/mp3320/concrete-citrus-4.mp3",
-      "free": false
+      "title": "Dawn Den",
+      "slug": "dawn-den",
+      "preview": "beats-preview/dawn-den.mp3",
+      "wav_key": "higher-vision/beats/wav/dawn-den.wav",
+      "mp3_key": "higher-vision/beats/mp3320/dawn-den.mp3",
+      "free": false,
+      "num": "44"
     },
     {
-      "title": "Chrome Pulse",
-      "slug": "chrome-pulse",
-      "preview": "beats-preview/chrome-pulse.mp3",
-      "wav_key": "higher-vision/beats/wav/chrome-pulse.wav",
-      "mp3_key": "higher-vision/beats/mp3320/chrome-pulse.mp3",
-      "free": false
+      "title": "Neon Quarter",
+      "slug": "neon-quarter",
+      "preview": "beats-preview/neon-quarter.mp3",
+      "wav_key": "higher-vision/beats/wav/neon-quarter.wav",
+      "mp3_key": "higher-vision/beats/mp3320/neon-quarter.mp3",
+      "free": false,
+      "num": "45"
     },
     {
-      "title": "Chrome Pulse 2",
-      "slug": "chrome-pulse-2",
-      "preview": "beats-preview/chrome-pulse-2.mp3",
-      "wav_key": "higher-vision/beats/wav/chrome-pulse-2.wav",
-      "mp3_key": "higher-vision/beats/mp3320/chrome-pulse-2.mp3",
-      "free": false
+      "title": "Plush Hollow",
+      "slug": "plush-hollow",
+      "preview": "beats-preview/plush-hollow.mp3",
+      "wav_key": "higher-vision/beats/wav/plush-hollow.wav",
+      "mp3_key": "higher-vision/beats/mp3320/plush-hollow.mp3",
+      "free": false,
+      "num": "46"
     },
     {
       "title": "Concrete Skyline",
@@ -395,15 +441,17 @@
       "preview": "beats-preview/concrete-skyline.mp3",
       "wav_key": "higher-vision/beats/wav/concrete-skyline.wav",
       "mp3_key": "higher-vision/beats/mp3320/concrete-skyline.mp3",
-      "free": false
+      "free": false,
+      "num": "47"
     },
     {
-      "title": "Concrete Skyline 2",
-      "slug": "concrete-skyline-2",
-      "preview": "beats-preview/concrete-skyline-2.mp3",
-      "wav_key": "higher-vision/beats/wav/concrete-skyline-2.wav",
-      "mp3_key": "higher-vision/beats/mp3320/concrete-skyline-2.mp3",
-      "free": false
+      "title": "Frost Drift",
+      "slug": "frost-drift",
+      "preview": "beats-preview/frost-drift.mp3",
+      "wav_key": "higher-vision/beats/wav/frost-drift.wav",
+      "mp3_key": "higher-vision/beats/mp3320/frost-drift.mp3",
+      "free": false,
+      "num": "48"
     },
     {
       "title": "Soul of the Game",
@@ -411,31 +459,35 @@
       "preview": "beats-preview/soul-of-the-game.mp3",
       "wav_key": "higher-vision/beats/wav/soul-of-the-game.wav",
       "mp3_key": "higher-vision/beats/mp3320/soul-of-the-game.mp3",
-      "free": true
+      "free": true,
+      "num": "49"
     },
     {
-      "title": "Soul of the Game 2",
-      "slug": "soul-of-the-game-2",
-      "preview": "beats-preview/soul-of-the-game-2.mp3",
-      "wav_key": "higher-vision/beats/wav/soul-of-the-game-2.wav",
-      "mp3_key": "higher-vision/beats/mp3320/soul-of-the-game-2.mp3",
-      "free": false
+      "title": "Clay Harbor",
+      "slug": "clay-harbor",
+      "preview": "beats-preview/clay-harbor.mp3",
+      "wav_key": "higher-vision/beats/wav/clay-harbor.wav",
+      "mp3_key": "higher-vision/beats/mp3320/clay-harbor.mp3",
+      "free": false,
+      "num": "50"
     },
     {
-      "title": "Concrete Serenity",
-      "slug": "concrete-serenity",
-      "preview": "beats-preview/concrete-serenity.mp3",
-      "wav_key": "higher-vision/beats/wav/concrete-serenity.wav",
-      "mp3_key": "higher-vision/beats/mp3320/concrete-serenity.mp3",
-      "free": false
+      "title": "Pewter Dusk",
+      "slug": "pewter-dusk",
+      "preview": "beats-preview/pewter-dusk.mp3",
+      "wav_key": "higher-vision/beats/wav/pewter-dusk.wav",
+      "mp3_key": "higher-vision/beats/mp3320/pewter-dusk.mp3",
+      "free": false,
+      "num": "51"
     },
     {
-      "title": "Concrete Serenity 2",
-      "slug": "concrete-serenity-2",
-      "preview": "beats-preview/concrete-serenity-2.mp3",
-      "wav_key": "higher-vision/beats/wav/concrete-serenity-2.wav",
-      "mp3_key": "higher-vision/beats/mp3320/concrete-serenity-2.mp3",
-      "free": false
+      "title": "Sage Ember",
+      "slug": "sage-ember",
+      "preview": "beats-preview/sage-ember.mp3",
+      "wav_key": "higher-vision/beats/wav/sage-ember.wav",
+      "mp3_key": "higher-vision/beats/mp3320/sage-ember.mp3",
+      "free": false,
+      "num": "52"
     },
     {
       "title": "Velvet Clutch",
@@ -443,31 +495,35 @@
       "preview": "beats-preview/velvet-clutch.mp3",
       "wav_key": "higher-vision/beats/wav/velvet-clutch.wav",
       "mp3_key": "higher-vision/beats/mp3320/velvet-clutch.mp3",
-      "free": false
+      "free": false,
+      "num": "53"
     },
     {
-      "title": "Velvet Clutch 2",
-      "slug": "velvet-clutch-2",
-      "preview": "beats-preview/velvet-clutch-2.mp3",
-      "wav_key": "higher-vision/beats/wav/velvet-clutch-2.wav",
-      "mp3_key": "higher-vision/beats/mp3320/velvet-clutch-2.mp3",
-      "free": false
+      "title": "Birch Tide",
+      "slug": "birch-tide",
+      "preview": "beats-preview/birch-tide.mp3",
+      "wav_key": "higher-vision/beats/wav/birch-tide.wav",
+      "mp3_key": "higher-vision/beats/mp3320/birch-tide.mp3",
+      "free": false,
+      "num": "54"
     },
     {
-      "title": "Soul of the Game 3",
-      "slug": "soul-of-the-game-3",
-      "preview": "beats-preview/soul-of-the-game-3.mp3",
-      "wav_key": "higher-vision/beats/wav/soul-of-the-game-3.wav",
-      "mp3_key": "higher-vision/beats/mp3320/soul-of-the-game-3.mp3",
-      "free": false
+      "title": "Flint Hour",
+      "slug": "flint-hour",
+      "preview": "beats-preview/flint-hour.mp3",
+      "wav_key": "higher-vision/beats/wav/flint-hour.wav",
+      "mp3_key": "higher-vision/beats/mp3320/flint-hour.mp3",
+      "free": false,
+      "num": "55"
     },
     {
-      "title": "Soul of the Game 4",
-      "slug": "soul-of-the-game-4",
-      "preview": "beats-preview/soul-of-the-game-4.mp3",
-      "wav_key": "higher-vision/beats/wav/soul-of-the-game-4.wav",
-      "mp3_key": "higher-vision/beats/mp3320/soul-of-the-game-4.mp3",
-      "free": false
+      "title": "Cocoa Lane",
+      "slug": "cocoa-lane",
+      "preview": "beats-preview/cocoa-lane.mp3",
+      "wav_key": "higher-vision/beats/wav/cocoa-lane.wav",
+      "mp3_key": "higher-vision/beats/mp3320/cocoa-lane.mp3",
+      "free": false,
+      "num": "56"
     },
     {
       "title": "Chrome Synapse",
@@ -475,15 +531,17 @@
       "preview": "beats-preview/chrome-synapse.mp3",
       "wav_key": "higher-vision/beats/wav/chrome-synapse.wav",
       "mp3_key": "higher-vision/beats/mp3320/chrome-synapse.mp3",
-      "free": false
+      "free": false,
+      "num": "57"
     },
     {
-      "title": "Chrome Synapse 2",
-      "slug": "chrome-synapse-2",
-      "preview": "beats-preview/chrome-synapse-2.mp3",
-      "wav_key": "higher-vision/beats/wav/chrome-synapse-2.wav",
-      "mp3_key": "higher-vision/beats/mp3320/chrome-synapse-2.mp3",
-      "free": false
+      "title": "Saddle Smoke",
+      "slug": "saddle-smoke",
+      "preview": "beats-preview/saddle-smoke.mp3",
+      "wav_key": "higher-vision/beats/wav/saddle-smoke.wav",
+      "mp3_key": "higher-vision/beats/mp3320/saddle-smoke.mp3",
+      "free": false,
+      "num": "58"
     }
   ]
 }

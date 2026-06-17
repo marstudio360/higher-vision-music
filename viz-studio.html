@@ -125,9 +125,9 @@ function getBands(){ const NB=P.bars|0; analyser.getByteFrequencyData(freq); con
 }
 
 // ---- library ----
-let catalog=null, curSlug='';
-fetch('catalog.json').then(r=>r.json()).then(c=>{ catalog=c; const sel=document.getElementById('beat'); (c.beats||[]).forEach(b=>{ const o=document.createElement('option'); o.value=b.slug; o.textContent=b.title; o.dataset.preview=b.preview; o.dataset.title=b.title; sel.appendChild(o); }); });
-document.getElementById('beat').addEventListener('change',e=>{ const o=e.target.selectedOptions[0]; if(!o.value)return; initAudio(); curSlug=o.value; if(!document.getElementById('ttrack').value){ P.ttrack=o.dataset.title.toUpperCase(); } audio.src=o.dataset.preview; document.getElementById('now').textContent=o.dataset.title+' · 30s preview'; play(); });
+let catalog=null, curSlug='', curNum='';
+fetch('catalog.json').then(r=>r.json()).then(c=>{ catalog=c; const sel=document.getElementById('beat'); (c.beats||[]).forEach(b=>{ const o=document.createElement('option'); o.value=b.slug; o.textContent=b.title; o.dataset.preview=b.preview; o.dataset.title=b.title; o.dataset.num=b.num||''; sel.appendChild(o); }); });
+document.getElementById('beat').addEventListener('change',e=>{ const o=e.target.selectedOptions[0]; if(!o.value)return; initAudio(); curSlug=o.value; curNum=o.dataset.num||''; if(!document.getElementById('ttrack').value){ P.ttrack=o.dataset.title.toUpperCase(); } audio.src=o.dataset.preview; document.getElementById('now').textContent=o.dataset.title+' · 30s preview'; play(); });
 document.getElementById('file').addEventListener('change',e=>{ const f=e.target.files[0]; if(!f)return; initAudio(); curSlug=f.name.replace(/\.[^.]+$/,''); audio.src=URL.createObjectURL(f); if(!P.ttrack)P.ttrack=curSlug.replace(/[-_]/g,' ').toUpperCase(); document.getElementById('now').textContent=f.name; play(); });
 function play(){ initAudio(); if(actx.state==='suspended')actx.resume(); audio.play(); document.getElementById('play').textContent='❚❚ Pause'; }
 document.getElementById('play').onclick=()=>{ initAudio(); if(audio.paused){play();} else {audio.pause(); document.getElementById('play').textContent='▶ Play';} };
@@ -198,7 +198,7 @@ function drawPlayer(bands){
   ctx.fillStyle='#bce8da'; ctx.font=`${Math.round(H*0.022)}px 'Space Mono',monospace`; ctx.textAlign='right';
   ctx.fillText(fmt(audio.currentTime)+' / '+fmt(audio.duration), W-m, y-h*1.4);
   ctx.textAlign='left'; ctx.fillStyle='#9ad0c8'; ctx.fillText('NOW PLAYING', m, H*0.07);
-  ctx.textAlign='right'; ctx.fillStyle='#d29bb4'; ctx.font=`700 ${Math.round(H*0.024)}px Bahnschrift,sans-serif`; ctx.fillText('SLOW BOOMBAP', W-m, H*0.07);
+  ctx.textAlign='right'; ctx.fillStyle='#d29bb4'; ctx.font=`700 ${Math.round(H*0.024)}px Bahnschrift,sans-serif`; ctx.fillText(curNum?('BEAT '+curNum):'HIGHER VISION', W-m, H*0.07);
   ctx.fillStyle='#86a09e'; ctx.font=`${Math.round(H*0.02)}px 'Space Mono',monospace`; ctx.fillText('@highervisionmusic', W-m, H*0.11);
   ctx.restore(); ctx.textAlign='left';
 }

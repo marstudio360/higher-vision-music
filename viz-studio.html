@@ -16,6 +16,10 @@
   @media(max-width:900px){ .wrap{ grid-template-columns:1fr; } }
   .stage{ background:#000; border:1px solid var(--border); border-radius:12px; overflow:hidden; position:relative; }
   canvas{ width:100%; display:block; aspect-ratio:16/9; }
+  .stage:fullscreen{ display:flex; align-items:center; justify-content:center; background:#000; }
+  .stage:fullscreen canvas{ width:auto; height:100vh; max-width:100vw; aspect-ratio:16/9; }
+  .stage:fullscreen .transport{ position:fixed; bottom:0; left:0; right:0; opacity:0; transition:opacity .2s; }
+  .stage:fullscreen .transport:hover{ opacity:1; }
   .transport{ display:flex; flex-wrap:wrap; gap:8px; align-items:center; padding:10px; border-top:1px solid var(--border); background:var(--panel); }
   .panel{ background:var(--panel); border:1px solid var(--border); border-radius:12px; padding:14px; height:fit-content; }
   .panel h3{ margin:.2rem 0 .8rem; font-size:.7rem; letter-spacing:.18em; text-transform:uppercase; color:var(--teal2); font-family:'Space Mono',monospace; }
@@ -47,6 +51,7 @@
       <select id="beat"><option value="">— pick a beat —</option></select>
       <button id="play" class="btn-primary">▶ Play</button>
       <button id="restart">⟲</button>
+      <button id="fs">⛶ Fullscreen</button>
       <label class="ck" style="margin:0"><input type="file" id="file" accept="audio/*" style="display:none" /><button onclick="document.getElementById('file').click()">＋ Load file</button></label>
       <span id="now" style="color:var(--muted);font-size:.74rem;font-family:'Space Mono',monospace;"></span>
     </div>
@@ -132,6 +137,8 @@ document.getElementById('file').addEventListener('change',e=>{ const f=e.target.
 function play(){ initAudio(); if(actx.state==='suspended')actx.resume(); audio.play(); document.getElementById('play').textContent='❚❚ Pause'; }
 document.getElementById('play').onclick=()=>{ initAudio(); if(audio.paused){play();} else {audio.pause(); document.getElementById('play').textContent='▶ Play';} };
 document.getElementById('restart').onclick=()=>{ audio.currentTime=0; play(); };
+document.getElementById('fs').onclick=()=>{ const el=document.querySelector('.stage'); if(!document.fullscreenElement){ (el.requestFullscreen||el.webkitRequestFullscreen).call(el); } else { document.exitFullscreen(); } };
+document.addEventListener('fullscreenchange',()=>{ setTimeout(resize,120); });
 
 // ---- draw ----
 let rotAcc=0, parts=[]; for(let i=0;i<300;i++)parts.push({a:Math.random()*7,r:0.3+Math.random()*0.7,s:(Math.random()-.5)*0.004,z:1+Math.random()*2});

@@ -222,9 +222,9 @@
     {
       "title": "Ember",
       "slug": "ember",
-      "preview": "beats-preview/ember.mp3",
-      "wav_key": "higher-vision/beats/wav/ember.wav",
-      "mp3_key": "higher-vision/beats/mp3320/ember.mp3",
+      "preview": "beats-preview/topaz.mp3",
+      "wav_key": "higher-vision/beats/wav/topaz.wav",
+      "mp3_key": "higher-vision/beats/mp3320/topaz.mp3",
       "free": false,
       "num": "23"
     },
@@ -249,9 +249,9 @@
     {
       "title": "Amber",
       "slug": "amber",
-      "preview": "beats-preview/amber.mp3",
-      "wav_key": "higher-vision/beats/wav/amber.wav",
-      "mp3_key": "higher-vision/beats/mp3320/amber.mp3",
+      "preview": "beats-preview/gold.mp3",
+      "wav_key": "higher-vision/beats/wav/gold.wav",
+      "mp3_key": "higher-vision/beats/mp3320/gold.mp3",
       "free": false,
       "num": "26"
     },
@@ -310,15 +310,6 @@
       "num": "32"
     },
     {
-      "title": "Gold",
-      "slug": "gold",
-      "preview": "beats-preview/gold.mp3",
-      "wav_key": "higher-vision/beats/wav/gold.wav",
-      "mp3_key": "higher-vision/beats/mp3320/gold.mp3",
-      "free": true,
-      "num": "33"
-    },
-    {
       "title": "Wool",
       "slug": "wool",
       "preview": "beats-preview/wool.mp3",
@@ -353,15 +344,6 @@
       "mp3_key": "higher-vision/beats/mp3320/opal.mp3",
       "free": false,
       "num": "37"
-    },
-    {
-      "title": "Topaz",
-      "slug": "topaz",
-      "preview": "beats-preview/topaz.mp3",
-      "wav_key": "higher-vision/beats/wav/topaz.wav",
-      "mp3_key": "higher-vision/beats/mp3320/topaz.mp3",
-      "free": false,
-      "num": "38"
     },
     {
       "title": "Brass",
@@ -479,15 +461,6 @@
       "mp3_key": "higher-vision/beats/mp3320/pewter.mp3",
       "free": false,
       "num": "51"
-    },
-    {
-      "title": "Sage",
-      "slug": "sage",
-      "preview": "beats-preview/sage.mp3",
-      "wav_key": "higher-vision/beats/wav/sage.wav",
-      "mp3_key": "higher-vision/beats/mp3320/sage.mp3",
-      "free": false,
-      "num": "52"
     },
     {
       "title": "Clutch",
